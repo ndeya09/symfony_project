@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Liste des Produits</title>
+    </head>
+    <body>
+        <h2>Cliquer sur un produit pour le modifier</h2>
+        {% for produit in products %}
+        <p><a href="{{ path('product_edit',{'id':produit.id})}}">{{ produit.name }} - {{ produit.prix }}</a></p>
+        {% endfor %}
+ 	</body>
+</html>
